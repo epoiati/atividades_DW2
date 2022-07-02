@@ -1,0 +1,113 @@
+@import "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap";
+
+
+body {
+    background-image: linear-gradient(180deg,#2903fd,  #082027);;
+    
+    font-family: sans-serif;
+    margin: 0
+}
+
+
+
+#find {
+    align-items: center;
+  
+    color: #fff;
+    display: flex;
+    flex: auto;
+    flex-flow: column nowrap;
+    font-size: 14px;
+    height: 100%;
+    overflow: auto
+}
+
+#cep-find, #find>h1 {
+    text-align: center;
+    width: 50%
+}
+
+#cep {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    font-size: 25px;
+    padding: .4rem;
+    text-align: center;
+    width: 20vw
+}
+
+#cep:focus {
+    -webkit-box-shadow: 0 0 20px 1px;
+    box-shadow: 0 0 20px 1px;
+    outline: none
+}
+
+#cep-error {
+    display: block;
+    font-size: 1.5vw;
+    padding: 10px
+}
+
+#results {
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex: auto;
+    
+    overflow: auto;
+    padding: 1rem
+}
+
+#result {
+    font-size: 20px;
+    text-align: left;
+    
+}
+
+#result>caption {
+    font-size: 25px;
+    font-weight: 700
+    
+}
+
+#city, #state, #death, #cases, #suspects, #refuses, #datetime {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #overview {
+        flex-flow: column nowrap
+    }
+
+    #find {
+        flex: auto;
+        width: 100%
+    }
+
+    #results {
+        flex: auto;
+        width: calc(100% - 2* 1rem)
+    }
+}
+
+@page {
+    size: A4
+}
+
+@media print {
+    .no-print, .no-print * {
+        display: none !important
+    }
+
+    #overview {
+        -webkit-box-shadow: none !important;
+        background-color: #fff !important;
+        box-shadow: none !important;
+        flex-flow: column nowrap
+    }
+
+   
+}
